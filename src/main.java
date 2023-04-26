@@ -4,10 +4,10 @@ public class main {
 
     public static void main(String[] args)  {
 
-        MenuService menuService = new MenuService();
+        MenuService objMenuService = new MenuService();
 
-        menuService.cargarClientesIniciales();
-        menuService.realizarMenuprincipal();
+        objMenuService.cargarClientesIniciales();
+        objMenuService.realizarMenuprincipal();
 
 
     }

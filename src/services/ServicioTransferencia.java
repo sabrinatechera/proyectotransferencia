@@ -24,7 +24,6 @@ public class ServicioTransferencia {
             cuentaOrigen = cuentaServicio.buscarCuenta(numeroCuentaOrigen, cuentas);
             if (cuentaOrigen == null) {
                 System.out.println("La cuenta del cliente origen no existe");
-                leer.nextLine();
             }
         } while (cuentaOrigen == null);
 
@@ -36,7 +35,6 @@ public class ServicioTransferencia {
 
             if (cuentaDestino == null) {
                 System.out.println("El cliente destino no existe");
-                leer.nextLine();
             }
         } while (cuentaDestino == null);
 
@@ -81,7 +79,7 @@ public class ServicioTransferencia {
         if (!(cuentaClienteDestino == null)) {
             if (monto > 0) {
                 cuentaClienteDestino.setSaldo(cuentaClienteDestino.getSaldo() + monto);
-                System.out.println("Deposito exitoso");
+                System.out.println("Deposito exitoso su saldo actual es de " + cuentaClienteDestino.getSaldo());
             } else {
                 System.out.println("El monto a depositar debe ser mayor a cero");
             }
